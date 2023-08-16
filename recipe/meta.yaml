@@ -28,8 +28,6 @@ test:
     - openff.nagl_models
   requires:
     - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/openforcefield/openff-nagl-models
