@@ -1,5 +1,5 @@
 {% set name = "openff-nagl-models" %}
-{% set version = "0.0.2" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7381db8a8bc61d7d78dbab9c08ed2cd5dae0b322e7315781d70fb4c0f4b62b6e
+  sha256: f6dd81579f49642bbf06eaf78f9d0dcc24d39de04d0c646507ff4de3b0b2fcc4
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - versioneer-518
   run:
-    - python >=3.8
-    - openff-nagl <0.3.0rc1
+    - python >=3.9
+  run_constrained:
+    - openff-nagl >=0.3.0
 
 test:
   imports:
