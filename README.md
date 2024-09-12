@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openff-nagl-mod
 
 Home: https://github.com/openforcefield/openff-nagl-models
 
-Package license: MIT
+Package license: CC-BY-4.0
 
 Summary: NAGL models released by the Open Force Field Initiative
 

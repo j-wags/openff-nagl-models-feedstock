@@ -36,8 +36,8 @@ about:
   description: |
     This package contains NAGL models released by the Open Force Field Initiative.
     They are intended to be used by OpenFF NAGL.
-  license: MIT
-  license_family: MIT
+  license: CC-BY-4.0
+  license_family: CC
   license_file: LICENSE
   doc_url: https://github.com/openforcefield/openff-nagl-models
   dev_url: https://github.com/openforcefield/openff-nagl-models
