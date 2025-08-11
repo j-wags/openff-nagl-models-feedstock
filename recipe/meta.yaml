@@ -1,5 +1,5 @@
 {% set name = "openff-nagl-models" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -11,17 +11,18 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}.*
     - pip
-    - versioneer-518
+    - versioningit
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }},<3.14.0a0
+    - platformdirs
     - importlib_resources
   run_constrained:
     - openff-nagl >=0.4.0
