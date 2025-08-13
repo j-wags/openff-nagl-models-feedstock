@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 62a157513a668bf8200932f59b1a5608c08371b63a4c8293ba46b2587385144b
+  sha256: 3bda84bce1b6cf94285d9ba4ad2eb51629fb89686304c1b22c476ccb523ed80f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
