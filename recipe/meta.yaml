@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python 3.10
     - pip
     - versioningit
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=3.10
     - platformdirs
     - importlib_resources
   run_constrained:
