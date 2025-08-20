@@ -1,5 +1,6 @@
 {% set name = "openff-nagl-models" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3bda84bce1b6cf94285d9ba4ad2eb51629fb89686304c1b22c476ccb523ed80f
+  sha256: 9942ed31ae05685ed6eda998d5a05e156f680f0d494452e60917a46a31093f20
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -16,12 +17,12 @@ build:
 
 requirements:
   host:
-    - python 3.10
+    - python {{ python_min }}
     - pip
     - versioningit
     - setuptools
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - platformdirs
     - importlib_resources
     - packaging
