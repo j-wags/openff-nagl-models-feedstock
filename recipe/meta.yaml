@@ -34,7 +34,7 @@ test:
     - openff.nagl_models
   requires:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }} 
 
 about:
   home: https://github.com/openforcefield/openff-nagl-models
